@@ -7,7 +7,7 @@ class NoteContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(bottom: 10, top: 10),
+      padding: const EdgeInsets.only(bottom: 10, top: 0),
       decoration: BoxDecoration(
         gradient: const LinearGradient(
           colors: [

@@ -12,10 +12,11 @@ class _NotesViewBuilderState extends State<NotesViewBuilder> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      padding: const EdgeInsets.only(top: 5, bottom: 5),
       itemCount: 8,
       itemBuilder: (_, i) {
         return const Padding(
-          padding: EdgeInsets.only(bottom: 10),
+          padding: EdgeInsets.only(bottom: 8),
           child: NoteContainer(),
         );
       },

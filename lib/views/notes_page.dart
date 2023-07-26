@@ -3,9 +3,14 @@ import 'package:note_app/widgets/note_appbar.dart';
 
 import 'package:note_app/widgets/note_view_builder.dart';
 
-class NotesPage extends StatelessWidget {
+class NotesPage extends StatefulWidget {
   const NotesPage({super.key});
 
+  @override
+  State<NotesPage> createState() => _NotesPageState();
+}
+
+class _NotesPageState extends State<NotesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +26,16 @@ class NotesPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.grey[900],
-        onPressed: () {},
+        onPressed: () {
+          showModalBottomSheet(
+            context: context,
+            builder: (context) {
+              return Column(
+                children: const [],
+              );
+            },
+          );
+        },
         child: const Icon(
           Icons.add,
           color: Colors.white,
